@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>перевод фрейма в проценты шкалы времини</title>
+</head>
+<body>
+<input type="text" class="numFr"><input type="text" class="percent"><button type="submit" class="button">пересчитать</button>
+<script>
+	var numFr = document.getElementsByClassName('numFr')[0];
+	var percent = document.getElementsByClassName('percent')[0];
+	var button = document.getElementsByClassName('button')[0];
+
+	numFr.focus();
+	numFr.value = '';
+	
+	button.onclick = funcSum;
+	numFr.onblur = funcSum;
+	percent.onblur = reloadPage;
+
+	function reloadPage() {
+		document.location.reload(true);
+	}
+
+	function funcSum() {
+		percent.value = ( (numFr.value * 15) / 360 ) * 100 / 15;
+	}
+
+</script>
+	
+</body>
+</html>
