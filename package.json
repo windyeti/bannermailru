@@ -1,0 +1,8 @@
+{
+  "name": "banner",
+  "author": "Yegor Tikhanin",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0"
+  }
+}
